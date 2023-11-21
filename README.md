@@ -1,16 +1,5 @@
-# flutter_application_1
+# Deezer Flutter
 
-A new Flutter project.
+Agora que estou desempregado, voltei a mexer com Flutter, então, não leve o código a sério.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](final.gif)
