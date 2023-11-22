@@ -215,62 +215,20 @@ _album(title, subtitle) {
   ]);
 }
 
-_mixed() {
-  return Container(
-    margin: const EdgeInsetsDirectional.only(top: 15),
-    child: SizedBox(
-      width: double.infinity,
-      height: 75,
-      child: Row(
-        children: [
-          Expanded(
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                _childMixed(),
-                _childMixed(),
-              ],
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
 _gridtest() {
   return Container(
     margin: const EdgeInsetsDirectional.only(top: 15),
     width: double.infinity,
-    height: 250,
+    height: 180,
     child: GridView(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.5,
-        crossAxisSpacing: 5,
+        childAspectRatio: 0.3,
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 10,
       ),
       scrollDirection: Axis.horizontal,
       children: [
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
-        _childMixed(),
         _childMixed(),
         _childMixed(),
         _childMixed(),
@@ -284,26 +242,21 @@ _childMixed() {
   const background =
       'https://images.unsplash.com/photo-1682687220247-9f786e34d472?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8';
   return Container(
-    margin: const EdgeInsets.only(left: 10),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(5),
+    width: 300,
+    decoration: const BoxDecoration(
       color: Colors.grey,
     ),
+    // padding: EdgeInsets.all(16),
     child: Row(
       children: [
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            image: const DecorationImage(
-              image: NetworkImage(
-                background,
-              ),
-              alignment: Alignment.topLeft,
-            ),
-          ),
-          width: 100,
-          height: 75,
+        SizedBox(
+          width: 60,
+          child: Image.network(background),
         ),
+        const SizedBox(
+          width: 8,
+        ),
+        const Text('Rio de Janeiro, Brasil'),
       ],
     ),
   );
