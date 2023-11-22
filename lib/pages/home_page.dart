@@ -217,7 +217,7 @@ _album(title, subtitle) {
 
 _gridtest() {
   return Container(
-    margin: const EdgeInsetsDirectional.only(top: 15),
+    margin: const EdgeInsets.only(top: 15, left: 10),
     width: double.infinity,
     height: 180,
     child: GridView(
@@ -233,6 +233,18 @@ _gridtest() {
         _childMixed(),
         _childMixed(),
         _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
+        _childMixed(),
       ],
     ),
   );
@@ -244,7 +256,7 @@ _childMixed() {
   return Container(
     width: 300,
     decoration: const BoxDecoration(
-      color: Colors.grey,
+      color: Color.fromRGBO(243, 243, 245, 1),
     ),
     // padding: EdgeInsets.all(16),
     child: Row(
