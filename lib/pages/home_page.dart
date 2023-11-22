@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
               _hero(),
               _alo(),
               _gridtest(),
+              _floatbar(),
             ],
           ),
         ),
@@ -299,4 +300,14 @@ _alo() {
       ],
     ),
   );
+}
+
+_floatbar() {
+  return SizedBox(
+      // width: double.infinity,
+      // height: double.infinity,
+      // child: ElevatedButton(
+      //     child: Text('Blabla blablablablablablabla bla bla bla'),
+      //     onPressed: () {}),
+      );
 }
