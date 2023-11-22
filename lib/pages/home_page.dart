@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               _header(),
               _hero(),
-              // _mixed(),
+              _alo(),
               _gridtest(),
             ],
           ),
@@ -41,7 +41,7 @@ _header() {
           onTap: () {},
           child: const Icon(
             Ionicons.notifications_outline,
-            size: 25,
+            size: 30,
           ),
         ),
       ),
@@ -51,7 +51,7 @@ _header() {
           onTap: () {},
           child: const Icon(
             Ionicons.person_outline,
-            size: 25,
+            size: 30,
           ),
         ),
       ),
@@ -61,8 +61,8 @@ _header() {
 
 _hero() {
   return Container(
-    margin: const EdgeInsets.only(left: 20),
-    child: (Column(
+    margin: const EdgeInsets.only(left: 15),
+    child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -81,7 +81,7 @@ _hero() {
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
         Container(
-          margin: const EdgeInsetsDirectional.only(top: 15),
+          margin: const EdgeInsets.only(top: 15),
           child: SizedBox(
             width: double.infinity,
             height: 170,
@@ -95,7 +95,7 @@ _hero() {
                       _album('Regina Casé', '50 faixas'),
                       _artist('Random'),
                       _album('Toninho do diabo', 'Essa é boa'),
-                      _album('analdelrey', 'para femboys'),
+                      _album('Lana Del Rey', 'Gosto duvidoso'),
                     ],
                   ),
                 ),
@@ -104,7 +104,7 @@ _hero() {
           ),
         )
       ],
-    )),
+    ),
   );
 }
 
@@ -269,6 +269,33 @@ _childMixed() {
           width: 8,
         ),
         const Text('Rio de Janeiro, Brasil'),
+      ],
+    ),
+  );
+}
+
+_alo() {
+  return Container(
+    margin: const EdgeInsets.only(left: 15),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(
+            top: 20,
+            bottom: 0,
+          ),
+          child: const Text(
+            'Mixes inspiradores por',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+        ),
+        const Text(
+          'Descubra faixas similares aos seus hits favoritos',
+          style: TextStyle(
+              fontSize: 13, fontWeight: FontWeight.w300, color: Colors.grey),
+        ),
       ],
     ),
   );
