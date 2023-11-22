@@ -14,10 +14,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[_header(), _hero()],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              _header(),
+              _hero(),
+              _mixed(),
+            ],
+          ),
         ),
       ),
     );
@@ -77,7 +83,7 @@ _hero() {
           margin: const EdgeInsetsDirectional.only(top: 15),
           child: SizedBox(
             width: double.infinity,
-            height: 160,
+            height: 170,
             child: Row(
               children: [
                 Expanded(
@@ -122,7 +128,7 @@ _artist(title) {
       Container(
         width: 110,
         margin: const EdgeInsets.only(
-          top: 110,
+          top: 110, left: 4,
           // left: 20,
         ),
         // width: 60,
@@ -179,6 +185,7 @@ _album(title, subtitle) {
           // ignore: sized_box_for_whitespace
           Container(
             width: 100,
+            margin: const EdgeInsets.only(top: 5),
             child: Text(
               subtitle,
               textAlign: TextAlign.start,
@@ -205,4 +212,63 @@ _album(title, subtitle) {
       ),
     ),
   ]);
+}
+
+_mixed() {
+  return Container(
+    margin: const EdgeInsetsDirectional.only(top: 15),
+    child: SizedBox(
+      width: double.infinity,
+      height: 75,
+      child: Row(
+        children: [
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                _childMixed(),
+                _childMixed(),
+                _childMixed(),
+                _childMixed(),
+                _childMixed(),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+_childMixed() {
+  const background =
+      'https://images.unsplash.com/photo-1682687220247-9f786e34d472?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8';
+  return SizedBox(
+    width: 280,
+    height: 75,
+    child: Container(
+      margin: const EdgeInsets.only(left: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.grey,
+      ),
+      child: Row(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              image: const DecorationImage(
+                image: NetworkImage(
+                  background,
+                ),
+                alignment: Alignment.topLeft,
+              ),
+            ),
+            width: 100,
+            height: 75,
+          ),
+        ],
+      ),
+    ),
+  );
 }
