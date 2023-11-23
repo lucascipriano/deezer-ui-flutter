@@ -17,6 +17,27 @@ class _HomePageState extends State<HomePage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           _floatbar(),
+          BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Ionicons.home),
+                label: 'Teste',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Ionicons.compass),
+                label: 'Explorar',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Ionicons.heart),
+                label: 'Favoritos',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Ionicons.search),
+                label: 'Busca',
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
@@ -28,6 +49,8 @@ class _HomePageState extends State<HomePage> {
               _header(),
               _hero(),
               _alo(),
+              _gridtest(),
+              _gridtest(),
               _gridtest(),
             ],
           ),
