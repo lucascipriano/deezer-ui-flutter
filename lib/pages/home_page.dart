@@ -13,10 +13,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      floatingActionButton: _floatbar(),
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          _floatbar(),
+          // _floatbar(),
           BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: const [
@@ -332,12 +334,14 @@ _alo() {
 
 _floatbar() {
   return Container(
-    clipBehavior: Clip.none,
     decoration: BoxDecoration(
       color: const Color.fromRGBO(15, 15, 31, 1),
       borderRadius: BorderRadius.circular(15),
     ),
-    margin: const EdgeInsets.only(bottom: 30),
+    margin: const EdgeInsets.only(
+      bottom: 5,
+      left: 30,
+    ),
     width: 400,
     height: 55,
     child: Row(
