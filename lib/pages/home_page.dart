@@ -13,6 +13,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _floatbar(),
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -23,7 +29,6 @@ class _HomePageState extends State<HomePage> {
               _hero(),
               _alo(),
               _gridtest(),
-              _floatbar(),
             ],
           ),
         ),
@@ -303,11 +308,74 @@ _alo() {
 }
 
 _floatbar() {
-  return SizedBox(
-      // width: double.infinity,
-      // height: double.infinity,
-      // child: ElevatedButton(
-      //     child: Text('Blabla blablablablablablabla bla bla bla'),
-      //     onPressed: () {}),
-      );
+  return Container(
+    margin: const EdgeInsets.only(bottom: 25),
+    decoration: BoxDecoration(
+      color: const Color.fromRGBO(15, 15, 31, 1),
+      borderRadius: BorderRadius.circular(15),
+    ),
+    width: 400,
+    height: 55,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(left: 10, right: 10),
+              child: const Icon(
+                Ionicons.play,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  textAlign: TextAlign.left,
+                  'Fica com o Troco',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  textAlign: TextAlign.left,
+                  'Husky Lion',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 10),
+          width: 80,
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                Ionicons.heart,
+                color: Colors.white,
+                size: 30,
+              ),
+              Icon(
+                Ionicons.play_skip_forward,
+                color: Colors.white,
+                size: 30,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
