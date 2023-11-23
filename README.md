@@ -6,4 +6,11 @@ Agora que estou desempregado, voltei a mexer com Flutter, então, não leve o c�
 
 Resolvi fazer apenas a UI principal do Deezer, não estou separando os widget da maneira correta para ser o mais rápido possível.
 
-![](github.gif)
+### Tasks
+
+- [ ] Arrumar a flot bottom bar, deixar transparente
+- [ ] Refatorar
+- [ ] Adicionar página de notificações, perfil e sub pages
+- [ ] Tipografia, cores e afins
+
+![](gf.gif)

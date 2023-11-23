@@ -332,11 +332,12 @@ _alo() {
 
 _floatbar() {
   return Container(
-    margin: const EdgeInsets.only(bottom: 25),
+    clipBehavior: Clip.none,
     decoration: BoxDecoration(
       color: const Color.fromRGBO(15, 15, 31, 1),
       borderRadius: BorderRadius.circular(15),
     ),
+    margin: const EdgeInsets.only(bottom: 30),
     width: 400,
     height: 55,
     child: Row(
